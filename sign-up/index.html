@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="container overflow-hidden">
+    <!-- component -->
+    <div
+        class="w-full block h-screen bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-4 flex items-center justify-center">
+        <div class="bg-white py-6 px-10 sm:max-w-md w-full rounded-xl">
+            <div class="sm:text-3xl text-2xl font-semibold text-center text-sky-600  mb-12">
+                Registration Form
+            </div>
+            <div>
+                <div>
+                    <input type="text"
+                        class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500"
+                        placeholder="Name" />
+                </div>
+                <div>
+                    <input type="email"
+                        class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 my-8"
+                        placeholder="Email Address" />
+                </div>
+                <div>
+                    <input type="phone"
+                        class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"
+                        placeholder="Phone" />
+                </div>
+                <div>
+                    <input type="password"
+                        class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"
+                        placeholder="Password" />
+                </div>
+                <div class="flex">
+                    <input type="checkbox" class="border-sky-400" />
+                    <div class="px-3 text-gray-500">
+                        I accept terms & conditions
+                    </div>
+                </div>
+                <div class="flex justify-center my-6">
+                    <a href="#_"
+                        class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-green-500 rounded-xl group">
+                        <span
+                            class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-green-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                            <span
+                                class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                        </span>
+                        <span
+                            class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                            Create Account
+                        </span>
+                    </a>
+                </div>
+                <div class="flex justify-center ">
+                    <p class="text-gray-500">Already have an account?</p>
+                    <a href="" class="text-sky-600 pl-2">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
