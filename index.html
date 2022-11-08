@@ -10,16 +10,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <header class="text-gray-600 body-font border-b">
+<body class="container bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
+    <header class="text-gray-600 body-font border-b-2 shadow bg-purple-100">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                <img src="./img/computer.png" fill="none" stroke="currentColor" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-                    viewBox="0 0 24 24">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-                <span class="ml-3 text-xl">sMart</span>
+                <img src="./img/computer.png" class="w-12 h-12 text-white mr-3">
+                <span class="ml-3 text-2xl semibold">sMart</span>
             </a>
             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
                 <a class="mr-5 hover:text-gray-900" href="#">Products</a>
@@ -28,7 +24,7 @@
                 <a class="mr-5 hover:text-gray-900" href="./about-us/">About Us</a>
             </nav>
             <button onclick="window.open('./auth/sign-up.html', '_self')"
-                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                class="inline-flex items-center bg-gray-200 border py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
                 Sign up
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     class="w-4 h-4 ml-1" viewBox="0 0 24 24">
@@ -41,7 +37,7 @@
     <section class="text-gray-600 body-font w-full" id="products">
         <div class="w-full px-5 py-24 mx-auto">
             <div class="flex flex-wrap justify-center -m-4">
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="product/boquet.html">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
                             src="./img/boquet.jpg">
@@ -52,10 +48,10 @@
                         <p class="mt-1">₹1,500</p>
                     </div>
                 </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="./product/chair.html">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="./img/chair.jpg" loading="lazy">
+                            src="./img/chair.jpg">
                     </a>
                     <div class="p-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">INDOORS</h3>
@@ -63,10 +59,10 @@
                         <p class="mt-1">₹3,000</p>
                     </div>
                 </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="./product/cloth-hanger.html">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="./img/cloth-hanger.jpg" loading="lazy">
+                            src="./img/cloth-hanger.jpg">
                     </a>
                     <div class="p-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
@@ -74,10 +70,10 @@
                         <p class="mt-1">₹900</p>
                     </div>
                 </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="./product/chocolate.html">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="./img/chocolate.jpg" loading="lazy">
+                            src="./img/chocolate.jpg">
                     </a>
                     <div class="p-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">FOOD</h3>
@@ -85,9 +81,9 @@
                         <p class="mt-1">₹600</p>
                     </div>
                 </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="./product/fan.html">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./img/fan.jpg" loading="lazy">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./img/fan.jpg">
                     </a>
                     <div class="p-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">INDOORS</h3>
@@ -95,10 +91,10 @@
                         <p class="mt-1">₹6,000</p>
                     </div>
                 </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="./product/electric-kettle.html">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="./img/electric_kettle.jpg" loading="lazy">
+                            src="./img/electric_kettle.jpg">
                     </a>
                     <div class="p-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
@@ -106,10 +102,10 @@
                         <p class="mt-1">₹2,300</p>
                     </div>
                 </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="./product/hand-grips.html">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="./img/hand-grips.jpg" loading="lazy">
+                            src="./img/hand-grips.jpg">
                     </a>
                     <div class="p-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
@@ -117,21 +113,10 @@
                         <p class="mt-1">₹1,100</p>
                     </div>
                 </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
-                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/rope.html">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="./img/rope.jpg" loading="lazy">
-                    </a>
-                    <div class="p-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
-                        <h2 class="text-gray-900 title-font text-lg font-medium">Nylon Rope</h2>
-                        <p class="mt-1">₹700</p>
-                    </div>
-                </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="./product/pen-notebook-combo.html">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="./img/pen-notebook-combo.jpg" loading="lazy">
+                            src="./img/pen-notebook-combo.jpg">
                     </a>
                     <div class="p-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">STATIONERY</h3>
@@ -139,10 +124,21 @@
                         <p class="mt-1">₹1,300</p>
                     </div>
                 </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/rope.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/rope.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Nylon Rope</h2>
+                        <p class="mt-1">₹700</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="./product/rubics-cube.html">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="./img/rubics-cube.jpg" loading="lazy">
+                            src="./img/rubics-cube.jpg">
                     </a>
                     <div class="p-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
@@ -150,10 +146,10 @@
                         <p class="mt-1">₹750</p>
                     </div>
                 </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="./product/stool.html">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="./img/stool.jpg" loading="lazy">
+                            src="./img/stool.jpg">
                     </a>
                     <div class="p-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
@@ -161,10 +157,10 @@
                         <p class="mt-1">₹1,000</p>
                     </div>
                 </div>
-                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                <div class="lg:w-1/5 md:w-1/2  bg-white m-3 w-full border rounded-lg shadow hover:shadow-lg">
                     <a class="block relative h-48 rounded-t overflow-hidden" href="./product/umbrella.html">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="./img/umbrella.jpg" loading="lazy">
+                            src="./img/umbrella.jpg">
                     </a>
                     <div class="p-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
