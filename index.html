@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="shortcut icon" href="/img/computer.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<script src="/sign-in/index.js"></script>
+
+<body>
+    <header class="text-gray-600 body-font border-b">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <img src="/img/computer.png" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Tailblocks</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900" href="#products">Products</a>
+                <a class="mr-5 hover:text-gray-900" href="#">second Link</a>
+                <a class="mr-5 hover:text-gray-900" href="./contact/">Contact</a>
+                <a class="mr-5 hover:text-gray-900" href="./about-us/">About Us</a>
+            </nav>
+            <button onclick=sign()
+                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Sign
+                in 
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="text-gray-600 body-font w-full" id="products">
+        <div class="w-full px-5 py-24 mx-auto">
+            <div class="flex flex-wrap justify-center -m-4">
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="product/boquet.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/boquet.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">DECOR</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Boquet</h2>
+                        <p class="mt-1">₹1,500</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/chair.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/chair.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">INDOORS</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Chair</h2>
+                        <p class="mt-1">₹3,000</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/chocolate.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/chocolate.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">FOOD</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Chocolate</h2>
+                        <p class="mt-1">₹600</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/fan.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./img/fan.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">INDOORS</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Ceiling fan</h2>
+                        <p class="mt-1">₹6,000</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/hand-grips.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/hand-grips.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Hand Grips</h2>
+                        <p class="mt-1">₹1,100</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/stool.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/stool.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Stepping Stool</h2>
+                        <p class="mt-1">₹1,000</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/pen-notebook-combo.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/pen-notebook-combo.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">STATIONERY</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Pen Notebook Combo</h2>
+                        <p class="mt-1">₹1,300</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/rope.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/rope.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Nylon Rope</h2>
+                        <p class="mt-1">₹700</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/rubics-cube.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/rubics-cube.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Rubics Cube</h2>
+                        <p class="mt-1">₹750</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/electric-kettle.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/electric_kettle.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Electric Kettle</h2>
+                        <p class="mt-1">₹2,300</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/cloth-hanger.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/cloth-hanger.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Cloths Hanger (set of 15)</h2>
+                        <p class="mt-1">₹900</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/5 md:w-1/2 m-3 w-full border rounded shadow hover:shadow-lg">
+                    <a class="block relative h-48 rounded-t overflow-hidden" href="./product/umbrella.html">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./img/umbrella.jpg">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TOOLS</h3>
+                        <h2 class="text-gray-900 title-font text-lg font-medium">Umbrella</h2>
+                        <p class="mt-1">₹1,800</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
