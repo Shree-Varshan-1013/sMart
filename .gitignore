@@ -1,0 +1,9 @@
+# text editor
+.vscode
+./.vscode/*
+
+# remove npm generated files
+node_modules/
+node_modules/*
+package-lock.json
+package.json
