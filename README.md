@@ -15,7 +15,7 @@ _____
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Shree-Varshan-1013/sMart.git
+   git clone https://github.com/Siddhesh-Agarwal/sMart.git
    ```
 
 ## Usage
