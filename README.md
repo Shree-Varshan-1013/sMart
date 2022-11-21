@@ -14,9 +14,42 @@ _____
 ## Installation
 
 1. Clone the repo
-   ```sh
-   git clone https://github.com/Siddhesh-Agarwal/sMart.git
-   ```
+
+    ```sh
+    git clone --single-branch -b main https://github.com/Siddhesh-Agarwal/sMart
+    ```
+
+2. create venv
+
+    ```sh
+    python3 -m venv venv
+    ```
+
+3. Activate venv
+  
+    - for linux:
+
+        ```sh
+        source venv/bin/activate
+        ```
+
+    - for windows:
+
+        ```sh
+        venv\Scripts\activate
+        ```
+
+4. install dependencies
+
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+5. Run the server
+
+    ```sh
+    flask run
+    ```
 
 ## Usage
 
