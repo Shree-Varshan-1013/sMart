@@ -6,10 +6,10 @@ export default function productCard(props) {
     return (
         <Center h="100vh">
             <Box maxW="320px" borderWidth="1px" borderRadius="md" shadow="md">
-                <Image borderTopRadius="md" src="{props.product.image}" />
+                <Image borderTopRadius="md" src="{props.props.image}" />
                 <Box p="5">
                     <Flex align="baseline" mt={2}>
-                        <Badge colorScheme="blue">{props.product.category}</Badge>
+                        <Badge colorScheme="blue">{props.props.category}</Badge>
                         <Text
                             ml={3}
                             textTransform="uppercase"
@@ -17,14 +17,14 @@ export default function productCard(props) {
                             fontWeight="bold"
                             color="blue.800"
                         >
-                            {props.product.brand}
+                            {props.props.brand}
                         </Text>
                     </Flex>
                     <Text mt={2} fontSize="3xl" fontWeight="bold" lineHeight="short">
-                        {props.product.name}
+                        {props.props.name}
                     </Text>
                     <Flex mt={2}>
-                        <Text>${props.product.price}</Text>
+                        <Text>${props.props.price}</Text>
                         <Spacer />
                         <Flex align="center">
                             <Box as={MdStar} color="orange.400" />
