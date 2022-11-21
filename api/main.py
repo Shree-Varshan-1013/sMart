@@ -1,14 +1,16 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from tinydb import TinyDB, Query
 from pydantic import FileUrl
 from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
+
 
 app = FastAPI()
 
 
 origins = [
-    "http://localhost",
     "http://localhost:3000",
+    "https://localhost:3000",
 ]
 
 app.add_middleware(
@@ -40,6 +42,8 @@ async def product_by_id(ID: int):
     db = connect_to_products()
     Product = Query()
     product = db.search(Product.id == ID)[0]
+    if product == []:
+        raise HTTPException(status_code=404, detail="Item not found")
     return product
 
 
@@ -82,6 +86,16 @@ async def all_teammates():
     return teammates
 
 
+@app.get("/teammate/{ID}")
+async def get_teammate_by_id(ID: int):
+    db = connect_to_teammates()
+    Teammate = Query()
+    teammate = db.search(Teammate.id == ID)[0]
+    if teammate == []:
+        raise HTTPException(status_code=404, detail="Teammate ID not found")
+    return teammate
+
+
 @app.post("/teammate/add/")
 def add_teammate(
     name: str,
@@ -101,10 +115,13 @@ def add_teammate(
     return teammate
 
 
-@app.get("./user/profile")
+@app.get("/user/profile")
 async def user_profile(name: str):
-    name = " ".join(name.strip().split())
     return {
-        "name": name.title(),
+        "name": name,
         "image": f"https://avatars.dicebear.com/api/initials/{name}.svg",
     }
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="localhost", port=8000)
