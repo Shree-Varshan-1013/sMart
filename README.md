@@ -43,6 +43,7 @@ __________________________________________________________________
 
 1. FastAPI
 1. TinyDB
+1. uvicorn
 1. React.js
 1. React-Router-DOM
 1. Material UI
