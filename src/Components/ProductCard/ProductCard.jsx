@@ -1,52 +1,40 @@
-import Card from "@chakra-ui/react/Card";
-import CardBody from "@chakra-ui/react/CardBody";
-import CardFooter from "@chakra-ui/react/CardFooter";
-import ButtonGroup from "@chakra-ui/react/ButtonGroup";
-import Button from "@chakra-ui/react/Button";
-import Heading from "@chakra-ui/react/Heading";
-import Text from "@chakra-ui/react/Text";
-import Stack from "@chakra-ui/react/Stack";
-import Image from "@chakra-ui/react/Image";
-import Divider from "@chakra-ui/react/Divider";
-import Badge from "@chakra-ui/react/Badge";
+import * as React from "react";
+import { Box, Center, Image, Flex, Badge, Text, Spacer } from "@chakra-ui/react";
+import { MdStar } from "react-icons/md";
 
-function ProductCard(props) {
+export default function Example(props) {
     return (
-        <Card maxW='sm'>
-            <CardBody>
-                <Image
-                    src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
-                    alt='Green double couch with wooden legs'
-                    borderRadius='lg'
-                />
-                <Stack mt='6' spacing='3'>
-                    <Heading size='md'>
-                        {props.name}
-                    </Heading>
-                    <Badge>
-                        {props.category}
-                    </Badge>
-                    <Text>
-                        {props.description}
+        <Center h="100vh">
+            <Box maxW="320px" borderWidth="1px" borderRadius="md" shadow="md">
+                <Image borderTopRadius="md" src="https://bit.ly/2k1H1t6" />
+                <Box p="5">
+                    <Flex align="baseline" mt={2}>
+                        <Badge colorScheme="blue">{props.props.catagory}</Badge>
+                        <Text
+                            ml={2}
+                            textTransform="uppercase"
+                            fontSize="sm"
+                            fontWeight="bold"
+                            color="blue.800"
+                        >
+                            {props.props.brand}
+                        </Text>
+                    </Flex>
+                    <Text mt={2} fontSize="3xl" fontWeight="bold" lineHeight="short">
+                        {props.props.name}
                     </Text>
-                    <Text color='blue.600' fontSize='2xl'>
-                        {props.price}
-                    </Text>
-                </Stack>
-            </CardBody>
-            <Divider />
-            <CardFooter>
-                <ButtonGroup spacing='2'>
-                    <Button variant='solid' colorScheme='blue'>
-                        Buy now
-                    </Button>
-                    <Button variant='ghost' colorScheme='blue'>
-                        Add to cart
-                    </Button>
-                </ButtonGroup>
-            </CardFooter>
-        </Card>
+                    <Flex>
+                        <Text mt={2}>${props.props.price}</Text>
+                        <Spacer />
+                        <Flex mt={2} align="center">
+                            <Box as={MdStar} color="orange.400" />
+                            <Text ml={1} fontSize="sm">
+                                <b>4.84</b> (190)
+                            </Text>
+                        </Flex>
+                    </Flex>
+                </Box>
+            </Box>
+        </Center>
     );
 }
-
-export default ProductCard;
