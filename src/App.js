@@ -1,31 +1,26 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  // Box,
-  // Text,
-  // Link,
-  // VStack,
-  // Code,
-  // Grid,
-  // theme,
-} from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import Theme from './theme';
-import SidebarWithHeader from './Components/Navbar/Navbar.tsx';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SignInForm from './Components/Sign-in/Sign-in';
-
+import SidebarWithHeader from './Components/Navbar/Navbar';
+import productCard from './Components/ProductCard/ProductCard';
 
 
 function App() {
+  // fetch products from localhost:8000/products
+  const products = fetch('http://localhost:8000/products')
+    .then(response => {
+      return response.json();
+    }).then(data => {
+      console.log(data);
+    })
   return (
     <ChakraProvider theme={Theme}>
-      {/* <SidebarWithHeader /> */}
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<SidebarWithHeader />} />
-          <React path="auth/login" element={<SignInForm />} />
-        </Routes>
-      </BrowserRouter>
+      <SidebarWithHeader />
+      {/* <div className="products">
+        {products.map((product) => (
+          <productCard product={product} />
+        ))}
+      </div> */}
     </ChakraProvider>
   );
 }
