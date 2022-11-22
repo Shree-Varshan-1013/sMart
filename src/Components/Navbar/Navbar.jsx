@@ -37,27 +37,27 @@ const LinkItems = [
     {
         name: 'Home',
         icon: FiHome,
-        to: "#"
+        to: "/"
     },
     {
         name: 'Products',
         icon: FiShoppingCart,
-        to: "#"
+        to: "/products"
     },
     {
         name: 'Wishlist',
         icon: FiStar,
-        to: "#"
+        to: "/wishlist"
     },
     {
         name: 'Settings',
         icon: FiSettings,
-        to: "#"
+        to: "/settings"
     },
     {
         name: 'Login',
         icon: FiLogIn,
-        to: "#"
+        to: "/login"
     },
 ];
 
