@@ -46,7 +46,8 @@ export default function SignUp() {
             };
             const record = await client.collection('users').create(data);
             if (record) {
-                console.log("Successfully signed up...")
+                localStorage.setItem('s-mart-username', user.firstName);
+                console.log("Successfully signed up...");
             }
         }
         catch (e) {

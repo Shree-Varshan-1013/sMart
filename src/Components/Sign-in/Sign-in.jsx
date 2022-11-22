@@ -36,6 +36,10 @@ export default function SignInForm() {
                 details.password,
             );
             if (authData) {
+                const record = await
+                client.collection('users').getFirstListItem('username="Joker"',{});
+                // console.log(localStorage.getItem('s-mart-username'));
+                console.log(record.email);
                 Swal.fire({
                     icon: 'success',
                     title: 'Yayy...',

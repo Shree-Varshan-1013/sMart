@@ -148,8 +148,10 @@ const NavItem = ({ icon, linkTo, children, ...rest }) => {
     );
 };
 
-const MobileNav = ({ onOpen, ...rest }) => {
-    const name = "Shree Varshan";
+const MobileNav = ({ onOpen, ...rest}) => {
+    // const username = firstname;
+    // const name = localStorage.getItem('s-mart-username', username);
+    const name = "shree";
     return (
         <Flex
             ml={{ base: 0, md: 60 }}
