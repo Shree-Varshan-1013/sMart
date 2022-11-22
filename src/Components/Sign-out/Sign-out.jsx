@@ -16,9 +16,45 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import PocketBase from 'pocketbase';
 
-export default function SignupCard() {
+export default function SignUp() {
+
+    const client = new PocketBase('http://127.0.0.1:8090');
+
+    const [user, setUser] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        repassword: '',
+    });
     const [showPassword, setShowPassword] = useState(false);
+
+    const eventHandler = (event) => {
+        setUser({ ...user, [event.target.name]: event.target.value });
+    }
+
+
+    const eventSubmit = async () => {
+        try {
+            const data = {
+                "username": user.firstName,
+                "email": user.email,
+                "password": user.password,
+                "passwordConfirm": user.repassword,
+            };
+            const record = await client.collection('users').create(data);
+            if (record) {
+                console.log("Successfully signed up...")
+            }
+        }
+        catch (e) {
+            console.log("Please try again later...");
+        }
+    }
+
+
 
     return (
         <Flex
@@ -45,24 +81,39 @@ export default function SignupCard() {
                             <Box>
                                 <FormControl id="firstName" isRequired>
                                     <FormLabel>First Name</FormLabel>
-                                    <Input type="text" />
+                                    <Input type="text" name="firstName" onChange={eventHandler} />
                                 </FormControl>
                             </Box>
                             <Box>
                                 <FormControl id="lastName">
                                     <FormLabel>Last Name</FormLabel>
-                                    <Input type="text" />
+                                    <Input type="text" name="lastName" onChange={eventHandler} />
                                 </FormControl>
                             </Box>
                         </HStack>
                         <FormControl id="email" isRequired>
                             <FormLabel>Email address</FormLabel>
-                            <Input type="email" />
+                            <Input type="email" name="email" onChange={eventHandler} />
                         </FormControl>
                         <FormControl id="password" isRequired>
                             <FormLabel>Password</FormLabel>
                             <InputGroup>
-                                <Input type={showPassword ? 'text' : 'password'} />
+                                <Input type={showPassword ? 'text' : 'password'} id="pass" name="password" onChange={eventHandler} />
+                                <InputRightElement h={'full'}>
+                                    <Button
+                                        variant={'ghost'}
+                                        onClick={() =>
+                                            setShowPassword((showPassword) => !showPassword)
+                                        }>
+                                        {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                                    </Button>
+                                </InputRightElement>
+                            </InputGroup>
+                        </FormControl>
+                        <FormControl id="password" isRequired>
+                            <FormLabel>Re - Password</FormLabel>
+                            <InputGroup>
+                                <Input type={showPassword ? 'text' : 'password'} id="repass" name="repassword" onChange={eventHandler} />
                                 <InputRightElement h={'full'}>
                                     <Button
                                         variant={'ghost'}
@@ -82,7 +133,8 @@ export default function SignupCard() {
                                 color={'white'}
                                 _hover={{
                                     bg: 'blue.500',
-                                }}>
+                                }}
+                                onClick={eventSubmit}>
                                 Sign up
                             </Button>
                         </Stack>
