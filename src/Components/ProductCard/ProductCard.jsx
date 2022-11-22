@@ -6,7 +6,7 @@ export default function productCard(props) {
     return (
         <Center h="100vh">
             <Box maxW="320px" borderWidth="1px" borderRadius="md" shadow="md">
-                <Image borderTopRadius="md" src="{props.props.image}" />
+                <Image borderTopRadius="md" src={props.props.image} />
                 <Box p="5">
                     <Flex align="baseline" mt={2}>
                         <Badge colorScheme="blue">{props.props.category}</Badge>

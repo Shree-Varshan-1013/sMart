@@ -29,17 +29,36 @@ import {
     FiStar,
     FiSettings,
     FiMenu,
-    // FiBell,
+    FiLogIn,
     FiChevronDown,
 } from 'react-icons/fi';
-// import { IconType } from 'react-icons';
-// import { ReactText } from 'react';
 
 const LinkItems = [
-    { name: 'Home', icon: FiHome },
-    { name: 'Products', icon: FiShoppingCart },
-    { name: 'Wishlist', icon: FiStar },
-    { name: 'Settings', icon: FiSettings },
+    {
+        name: 'Home',
+        icon: FiHome,
+        to: "#"
+    },
+    {
+        name: 'Products',
+        icon: FiShoppingCart,
+        to: "#"
+    },
+    {
+        name: 'Wishlist',
+        icon: FiStar,
+        to: "#"
+    },
+    {
+        name: 'Settings',
+        icon: FiSettings,
+        to: "#"
+    },
+    {
+        name: 'Login',
+        icon: FiLogIn,
+        to: "#"
+    },
 ];
 
 export default function SidebarWithHeader({
@@ -64,7 +83,6 @@ export default function SidebarWithHeader({
                     <SidebarContent onClose={onClose} />
                 </DrawerContent>
             </Drawer>
-            {/* mobilenav */}
             <MobileNav onOpen={onOpen} />
             <Box ml={{ base: 0, md: 60 }} p="4">
                 {children}
@@ -72,10 +90,6 @@ export default function SidebarWithHeader({
         </Box>
     );
 }
-
-// interface SidebarProps extends BoxProps {
-//     onClose: () => void;
-// }
 
 const SidebarContent = ({ onClose, ...rest }) => {
     return (
@@ -95,7 +109,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
                 <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
             </Flex>
             {LinkItems.map((link) => (
-                <NavItem key={link.name} icon={link.icon}>
+                <NavItem key={link.name} icon={link.icon} linkTo={link.to}>
                     {link.name}
                 </NavItem>
             ))}
@@ -103,14 +117,13 @@ const SidebarContent = ({ onClose, ...rest }) => {
     );
 };
 
-const NavItem = ({ icon, children, ...rest }) => {
+const NavItem = ({ icon, linkTo, children, ...rest }) => {
     return (
-        <Link href="#" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+        <Link href={linkTo} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
             <Flex
                 align="center"
                 py="3"
                 px="5"
-                // mx="4"
                 borderRadius="sm"
                 role="group"
                 cursor="pointer"
@@ -136,6 +149,7 @@ const NavItem = ({ icon, children, ...rest }) => {
 };
 
 const MobileNav = ({ onOpen, ...rest }) => {
+    const name = "Shree Varshan";
     return (
         <Flex
             ml={{ base: 0, md: 60 }}
@@ -164,12 +178,6 @@ const MobileNav = ({ onOpen, ...rest }) => {
             </Text>
 
             <HStack spacing={{ base: '0', md: '6' }}>
-                {/* <IconButton
-                    size="lg"
-                    variant="ghost"
-                    aria-label="open menu"
-                    icon={<FiBell />}
-                /> */}
                 <Flex alignItems={'center'}>
                     <Menu>
                         <MenuButton
@@ -179,19 +187,14 @@ const MobileNav = ({ onOpen, ...rest }) => {
                             <HStack>
                                 <Avatar
                                     size={'sm'}
-                                    src={
-                                        'https://images.unsplash.com/photo-1542738874-8c4b8b9b9f0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
-                                    }
+                                    src={`https://avatars.dicebear.com/api/initials/${name}.svg`}
                                 />
                                 <VStack
                                     display={{ base: 'none', md: 'flex' }}
                                     alignItems="flex-start"
                                     spacing="1px"
                                     ml="2">
-                                    <Text fontSize="sm">Siddhesh Agarwal</Text>
-                                    {/* <Text fontSize="xs" color="gray.600">
-                                        Admin
-                                    </Text> */}
+                                    <Text fontSize="sm">{name}</Text>
                                 </VStack>
                                 <Box display={{ base: 'none', md: 'flex' }}>
                                     <FiChevronDown />
@@ -201,10 +204,10 @@ const MobileNav = ({ onOpen, ...rest }) => {
                         <MenuList
                             bg={useColorModeValue('white', 'gray.900')}
                             borderColor={useColorModeValue('gray.200', 'gray.700')}>
-                            <MenuItem>Profile</MenuItem>
-                            <MenuItem>Settings</MenuItem>
-                            <MenuItem>Billing</MenuItem>
-                            <MenuDivider />1
+                            <MenuItem isLazy={true}>Profile</MenuItem>
+                            <MenuItem isLazy={true}>Settings</MenuItem>
+                            <MenuItem isLazy={true}>Billing</MenuItem>
+                            <MenuDivider />
                             <MenuItem>Sign out</MenuItem>
                         </MenuList>
                     </Menu>
