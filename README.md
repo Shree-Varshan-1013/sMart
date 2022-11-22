@@ -54,11 +54,11 @@ NOTE: Do not close the terminal else API will stop.
 __________________________________________________________________
 
 ## Dependencies
-
-1. FastAPI
-1. TinyDB
-1. uvicorn
-1. React.js
-1. React-Router-DOM
-1. Material UI
-1. PocketBase
+1. Python
+    - FastAPI
+    - TinyDB
+    - uvicorn
+2. JavaScript
+    - React.js
+    - Chakra UI
+    - PocketBase

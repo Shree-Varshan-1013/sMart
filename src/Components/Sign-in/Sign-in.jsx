@@ -42,9 +42,8 @@ export default function SignInForm() {
                 console.log(record.email);
                 Swal.fire({
                     icon: 'success',
-                    title: 'Yayy...',
-                    text: 'Successfully Logged In!',
-                    footer: '<a href="">Why do I have this issue?</a>'
+                    title: 'Success!',
+                    text: 'Successfully logged in.'
                 })
             }
         }
@@ -53,8 +52,7 @@ export default function SignInForm() {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Something went wrong!',
-                footer: '<a href="\'{url}\'">Why do I have this issue?</a>'
+                text: 'Username or password is incorrect.',
             })
         }
     }
