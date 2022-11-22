@@ -12,8 +12,49 @@ import {
     Text,
     useColorModeValue,
 } from '@chakra-ui/react';
+import { useState } from 'react';
+import PocketBase from 'pocketbase'
+import Swal from 'sweetalert2';
 
 export default function SignInForm() {
+
+    const [details, setDetails] = useState({
+        email: '',
+        password: '',
+    });
+
+    const eventHandler = (event) => {
+        setDetails({ ...details, [event.target.name]: event.target.value });
+    }
+
+    const client = new PocketBase('http://127.0.0.1:8090');
+
+    const eventLogin = async () => {
+        try {
+            const authData = await client.collection('users').authWithPassword(
+                details.email,
+                details.password,
+            );
+            if (authData) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Yayy...',
+                    text: 'Successfully Logged In!',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                })
+            }
+        }
+        catch (e) {
+            const url = "https://sweetalert2.github.io/#usage";
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<a href="\'{url}\'">Why do I have this issue?</a>'
+            })
+        }
+    }
+
     return (
         <Flex
             minH={'100vh'}
@@ -35,11 +76,11 @@ export default function SignInForm() {
                     <Stack spacing={4}>
                         <FormControl id="email">
                             <FormLabel>Email address</FormLabel>
-                            <Input type="email" />
+                            <Input type="email" name="email" value={details.email} onChange={eventHandler} />
                         </FormControl>
                         <FormControl id="password">
                             <FormLabel>Password</FormLabel>
-                            <Input type="password" />
+                            <Input type="password" name="password" value={details.password} onChange={eventHandler} />
                         </FormControl>
                         <Stack spacing={10}>
                             <Stack
@@ -54,7 +95,8 @@ export default function SignInForm() {
                                 color={'white'}
                                 _hover={{
                                     bg: 'blue.500',
-                                }}>
+                                }}
+                                onClick={eventLogin}>
                                 Sign in
                             </Button>
                         </Stack>
