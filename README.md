@@ -1,70 +1,64 @@
-# sMart - Student Mart
+# s-Mart
 
-An online marketplace for students to buy items.
+A eCommerce website for students!
+__________________________________________________________________
 
-_____
+## Running the project
 
-## Table of Contents
+### running the API
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+1. open project in terminal.
 
-## Installation
-
-1. Clone the repo
+2. create virtaul environment using:
 
     ```sh
-    git clone --single-branch -b main https://github.com/Siddhesh-Agarwal/sMart
+    python -m venv env
     ```
 
-2. create venv
+3. install dependencies using:
 
     ```sh
-    python3 -m venv venv
+    pip install -r ./requirements.txt
     ```
 
-3. Activate venv
-  
-    - for linux:
-
-        ```sh
-        source venv/bin/activate
-        ```
-
-    - for windows:
-
-        ```sh
-        venv\Scripts\activate
-        ```
-
-4. install dependencies
+4. goto `./api` using
 
     ```sh
-    pip install -r requirements.txt
+    cd ./api
     ```
 
-5. Run the server
+5. start API using
 
     ```sh
-    flask run
+    uvicorn main:app --reload
     ```
 
-## Usage
+NOTE: Do not close the terminal else API will stop.
 
-Run the project using [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VS Code.
+### starting the app
 
-## Contributing
+1. Open another terminal window.
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+2. Install the dependencies using:
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request and wait for it to be merged.
+    ```sh
+    npm i
+    ```
 
-## License
+3. start development server using:
 
-Check [LICENSE](./LICENSE) file.
+    ```sh
+    npm start
+    ```
+
+__________________________________________________________________
+
+## Dependencies
+
+1. FastAPI
+1. TinyDB
+1. uvicorn
+1. React.js
+1. React-Router-DOM
+1. Material UI
+1. PocketBase
